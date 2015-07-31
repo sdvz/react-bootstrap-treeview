@@ -62,12 +62,12 @@ var TreeView = React.createClass({
 
   render: function() {
 
-    this.setNodeId({ nodes: data });
+    this.setNodeId({ nodes: this.props.data });
 
     var children = [];
-    if (data) {
+    if (this.props.data) {
       var _this = this;
-      data.forEach(function (node) {
+      this.props.data.forEach(function (node) {
         children.push(<TreeNode node={node}
                                 level={1}
                                 visible={true}
